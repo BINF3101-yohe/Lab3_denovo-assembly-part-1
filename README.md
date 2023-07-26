@@ -2,16 +2,36 @@
 
 ## Step 1: Intro
 
+Over the past decade or so, Dr. LaBella (me!) has been a part of a large consortium that attempted to sequence all known species of budding yeasts. We will be analyzing the raw sequencing data generated as a part of this project. 
+
+The genomes that are currently publically available were described in this paper: https://www.cell.com/cell/pdf/S0092-8674(18)31332-1.pdf 
+
+
 ## Step 2: Choose a genome
 
-I have chosen to do the tutorial with SRR6475892. This means **you cannot choose SRR6475892**. 
+You will need to choose one genome/species to analyze during the course of this project. There are 196 species to choose from! 
+
+Go to this link and choose a species to work with this semester. Feel free to google the species to see what they are first! 
+
+List of Species: https://www.ncbi.nlm.nih.gov/bioproject?LinkName=sra_bioproject&from_uid=4951374 
+
+### Step 2a: BioSample
+To find the Sequence Read Archive (SRA) data you will click on the "BioSample" link
+
+### Step 2b: Click on SRA
+At the bottom and right-hand side of the page you will see a link to the SRA. Click that link
+
+### Step 3c: Find SRA Run identifier
+In the table you will see 1 run listed. Under the Run you will see a link. This is the identifier you will use throughout the project. 
+
+I have chosen to do the tutorial with SRR6475892 (_Blastobotrys americana_). This means **you cannot choose SRR6475892**. 
 This also means whenever you see SRR6475892 in the commands you will replace it with your own genome identifier. 
 
 ## LQ1
 **What is the name of the species you chose?**
 
 ## LQ2
-**What is the SRA identifier of the species you chose?**
+**What is the SRA Run identifier of the species you chose?**
 
 ## Step 3: Download a genome
 
