@@ -93,7 +93,13 @@ While the program is running let's look at the trimmomatic command we ran
 ## LQ
 **How many bases did we cut off at the end of our reads?**
 
-Once the pipeline is done running you will see the 4 output files appear in your directory. 
+Once the pipeline is done running you will see the 4 output files appear in your directory. You will also see the slurm output from your run. This slurm output will have some metrics from your trimmomatic analysis. 
+
+
+## LQ
+**What percent of your reads survived both the forward and reverse filtering?**
+Hint: This will be in your slurm output file. 
+
 
 #### 5. Generate a report for your assembly 
 To look at the quality of our sequencing data we will use a program called **fastqc**
