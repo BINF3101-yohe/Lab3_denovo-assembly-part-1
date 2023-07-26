@@ -1,8 +1,8 @@
 # De novo assembly part 1
 
-### Intro
+## Step 1: Intro
 
-### Choose a genome
+## Step 2: Choose a genome
 
 I have chosen to do the tutorial with SRR6475892. This means **you cannot choose SRR6475892**. 
 This also means whenever you see SRR6475892 in the commands you will replace it with your own genome identifier. 
@@ -12,9 +12,9 @@ This also means whenever you see SRR6475892 in the commands you will replace it 
 ## LQ
 **What is the SRA identifier of the species you chose?**
 
-### Download a genome
+## Step 3: Download a genome
 
-#### 1. Load the SRA Toolkit on the cluster
+### Step 3a: Load the SRA Toolkit on the cluster
 
 The SRA provides a set of tools to help us retrieve data from the SRA. You will need to load these tools in your terminal. 
 
@@ -35,7 +35,7 @@ If this occurs type this command and try again
 vdb-config --restore-defaults
 ```
    
-#### 2. Retrieve the SRA file
+### Step 3b: Retrieve the SRA file
 
 To obtain the sequencing data you will use the SRA identifier associated with your genome and the command ```prefetch```
 
@@ -43,7 +43,7 @@ To obtain the sequencing data you will use the SRA identifier associated with yo
 prefetch SRR6475892
 ```
 
-#### 3. Extract the fastq files
+### Step 3c: Extract the fastq files
 
 SRA data is saved in a file format called .sra that can be converted to a wide array of file types. We want to get the fastq files associated with the genome so we will use the ```fastq-dump``` command. 
 
@@ -59,7 +59,7 @@ ls                                    #see the files you created
 Hint: Take a look at your file using the ```head``` command. Is there anything specific about each sequence description? Can you use the ```grep``` command to count how many times you see that specific sequence descriptor?
 
 
-#### 4. Filter your fastq file
+## Step 4: Filter your fastq file
 
 The sequence file analyzed here has ~6.5 million reads. We know from class that these reads can vary in quality and that there are adapters used in the sequencing that need to be removed.
 
@@ -67,6 +67,7 @@ We will use a program called **trimmomatic** to remove the adaptors used in Illu
 
 trimmomatic can take a few minutes to run so we will run it using our first **slurm script**. 
 
+### Step 4a: Run trimmomatic
 Follow these steps to run trimmomatic
 - Upload or copy the slurm (trimmomatic.slurm) script to your working directory (it must be in the same directory as your files)
 - Edit the slurm script so that it will analyze the genome that you chose
@@ -101,7 +102,7 @@ Once the pipeline is done running you will see the 4 output files appear in your
 Hint: This will be in your slurm output file. 
 
 
-#### 5. Generate a report for your assembly 
+## Step 5: Analyze your trimmed read quality
 To look at the quality of our sequencing data we will use a program called **fastqc**
 
 
