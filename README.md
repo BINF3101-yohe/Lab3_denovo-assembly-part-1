@@ -7,9 +7,10 @@
 I have chosen to do the tutorial with SRR6475892. This means **you cannot choose SRR6475892**. 
 This also means whenever you see SRR6475892 in the commands you will replace it with your own genome identifier. 
 
-## LQ
+## LQ1
 **What is the name of the species you chose?**
-## LQ
+
+## LQ2
 **What is the SRA identifier of the species you chose?**
 
 ## Step 3: Download a genome
@@ -54,7 +55,7 @@ fastq-dump --split-e SRR6475892.sra   #We did paired-end sequencing so you will 
 ls                                    #see the files you created
 ```
 
-## LQ
+## LQ3
 **How many reads are there in your fastq file(s)? Report the number and the command.**
 Hint: Take a look at your file using the ```head``` command. Is there anything specific about each sequence description? Can you use the ```grep``` command to count how many times you see that specific sequence descriptor?
 
@@ -91,19 +92,33 @@ While the program is running let's look at the trimmomatic command we ran
 
 ```HEADCROP:15 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36``` These are the settings to trim the sequences. Use the website http://www.usadellab.org/cms/?page=trimmomatic to learn more about these settings. 
 
-## LQ
+## LQ4
 **How many bases did we cut off at the end of our reads?**
 
 Once the pipeline is done running you will see the 4 output files appear in your directory. You will also see the slurm output from your run. This slurm output will have some metrics from your trimmomatic analysis. 
 
 
-## LQ
+## LQ5
 **What percent of your reads survived both the forward and reverse filtering?**
 Hint: This will be in your slurm output file. 
 
 
 ## Step 5: Analyze your trimmed read quality
-To look at the quality of our sequencing data we will use a program called **fastqc**
+To look at the quality of our sequencing data we will use a program called **fastqc**. We will run this on only our successfully paired reads. 
 
+### Step 5a: Run fastqc
+
+```bash
+module load fastqc
+fastqc SRR6475892_1_paired.fastq.gz SRR6475892_2_paired.fastq.gz
+```
+This will generate a number of files with the ```fastqc``` in the name. We are interested in looking at the html files which have a nice summary of the quality of our reads. 
+
+### Step 5b: Analyze fastqc results
+
+You will likely need to download the html files to look at them. Once you have them open you will be able to see the summary report for your paired reads. You **may not get all green check marks** for quality. That is ok! We could go back and re-run trimmomatic again, but these should be good enough to move foward. 
+
+## LQ6
+**What are the scores you got for your genomes across the various statistics?**
 
 
