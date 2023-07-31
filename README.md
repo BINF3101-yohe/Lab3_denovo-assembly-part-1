@@ -1,4 +1,4 @@
-# De novo assembly part 1
+# Lab 2: De novo assembly part 1
 
 ## Step 1: Intro
 
@@ -9,20 +9,35 @@ The genomes that are currently publically available were described in this paper
 
 ## Step 2: Choose a genome
 
-You will need to choose one genome/species to analyze during the course of this project. There are 196 species to choose from! 
+You will need to choose one genome/species to analyze during the course of this project. There are almost 200 species to choose from! 
 
 Go to this link and choose a species to work with this semester. Feel free to google the species to see what they are first! 
 
+The species are listed under **Taxonomy** - See image below. 
 List of Species: https://www.ncbi.nlm.nih.gov/bioproject?LinkName=sra_bioproject&from_uid=4951374 
+<img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/53ec120d-3095-4204-b174-1d050091afb0" width="400">
 
 ### Step 2a: BioSample
 To find the Sequence Read Archive (SRA) data you will click on the "BioSample" link
 
-### Step 2b: Click on SRA
+<img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/98482b42-7a09-4628-9406-9ad1923623f2" width="400">
+
+### Step 2c: Click on SRA
 At the bottom and right-hand side of the page you will see a link to the SRA. Click that link
 
-### Step 3c: Find SRA Run identifier
+<img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/d996ae5a-9874-4963-afaa-d34893e13ac3" width="400">
+
+### Step 2d: Pick the genome
+
+Some of the genomes we are using have been subsequently re-sequenced. To make sure we are all on the same page select genome 2. (Do not select the one starting with yHMP)
+
+<img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/b2318a16-c292-4b0f-8e31-e8a2faf66faf" width="400">
+
+
+### Step 2e: Find SRA Run identifier
 In the table you will see 1 run listed. Under the Run you will see a link. This is the identifier you will use throughout the project. 
+
+<img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/3440db16-5673-427f-8c59-57929617d8bc" width="400">
 
 I have chosen to do the tutorial with SRR6475892 (_Blastobotrys americana_). This means **you cannot choose SRR6475892**. 
 This also means whenever you see SRR6475892 in the commands you will replace it with your own genome identifier. 
