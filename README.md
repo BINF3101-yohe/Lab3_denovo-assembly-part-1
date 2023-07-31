@@ -24,7 +24,7 @@
 
 [LQ6](#lq6)
 
-[Commands and Software])(#commands-and-software)
+[Commands and Software](#commands-and-software)
 
 &nbsp;
 ## Step 1: Intro
