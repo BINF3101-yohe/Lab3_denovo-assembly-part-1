@@ -199,7 +199,9 @@ prefetch [SRA_ID]
 fastq-dump --split-e [SRA_ID}.sra
 ```
 Details here: https://github.com/ncbi/sra-tools/wiki/08.-prefetch-and-fasterq-dump
+
 &nbsp;
+
 ##### trimmomatic
 Trimmomatic is run using java
 ```bash
