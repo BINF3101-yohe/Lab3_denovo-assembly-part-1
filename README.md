@@ -1,12 +1,39 @@
 # Lab 2: De novo assembly part 1
 
+# Outline
+
+[Step 1: Intro](#step-1-intro)
+
+[Step 2: Choose a genome](#step-2-choose-a-genome)
+
+[LQ1](#lq1)
+
+[LQ2](#lq2)
+
+[Step 3: Download a genome](#step-3-download-a-genome)
+
+[LQ3](#lq3)
+
+[Step 4: Filter your fastq file](#step-4-filter-your-fastq-file)
+
+[LQ4](#lq4)
+
+[LQ5](#lq5)
+
+[Step 5: Analyze your trimmed read quality](#step-5-analyze-your-trimmed-read-quality)
+
+[LQ6](#lq6)
+
+[Commands and Software])(#commands-and-software)
+
+&nbsp;
 ## Step 1: Intro
 
 Over the past decade or so, Dr. LaBella (me!) has been a part of a large consortium that attempted to sequence all known species of budding yeasts. We will be analyzing the raw sequencing data generated as a part of this project. 
 
 The genomes that are currently publically available were described in this paper: https://www.cell.com/cell/pdf/S0092-8674(18)31332-1.pdf 
 
-
+&nbsp;
 ## Step 2: Choose a genome
 
 You will need to choose one genome/species to analyze during the course of this project. There are almost 200 species to choose from! 
@@ -15,6 +42,7 @@ Go to this link and choose a species to work with this semester. Feel free to go
 
 The species are listed under **Taxonomy** - See image below. 
 List of Species: https://www.ncbi.nlm.nih.gov/bioproject?LinkName=sra_bioproject&from_uid=4951374 
+
 <img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/53ec120d-3095-4204-b174-1d050091afb0" width="400">
 
 ### Step 2a: BioSample
@@ -41,13 +69,13 @@ In the table you will see 1 run listed. Under the Run you will see a link. This 
 
 I have chosen to do the tutorial with SRR6475892 (_Blastobotrys americana_). This means **you cannot choose SRR6475892**. 
 This also means whenever you see SRR6475892 in the commands you will replace it with your own genome identifier. 
-
+&nbsp;
 ## LQ1
 **What is the name of the species you chose?**
-
+&nbsp;
 ## LQ2
 **What is the SRA Run identifier of the species you chose?**
-
+&nbsp;
 ## Step 3: Download a genome
 
 ### Step 3a: Load the SRA Toolkit on the cluster
@@ -89,12 +117,12 @@ ls                                    #see what is in the folder
 fastq-dump --split-e SRR6475892.sra   #We did paired-end sequencing so you will need to split them using this command
 ls                                    #see the files you created
 ```
-
+&nbsp;
 ## LQ3
 **How many reads are there in your fastq file(s)? Report the number and the command.**
 Hint: Take a look at your file using the ```head``` command. Is there anything specific about each sequence description? Can you use the ```grep``` command to count how many times you see that specific sequence descriptor?
 
-
+&nbsp;
 ## Step 4: Filter your fastq file
 
 The sequence file analyzed here has ~6.5 million reads. We know from class that these reads can vary in quality and that there are adapters used in the sequencing that need to be removed.
@@ -126,18 +154,18 @@ While the program is running let's look at the trimmomatic command we ran
 ```ILLUMINACLIP:/apps/pkg/trimmomatic/0.39/adapters/TruSeq2-PE.fa:2:30:10``` This is the directory where the Illumina adaptors (repeated sequences) are stored. This tells trimmomatic what to look for and remove. 
 
 ```HEADCROP:15 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36``` These are the settings to trim the sequences. Use the website http://www.usadellab.org/cms/?page=trimmomatic to learn more about these settings. 
-
+&nbsp;
 ## LQ4
 **How many bases did we cut off at the end of our reads?**
 
 Once the pipeline is done running you will see the 4 output files appear in your directory. You will also see the slurm output from your run. This slurm output will have some metrics from your trimmomatic analysis. 
 
-
+&nbsp;
 ## LQ5
 **What percent of your reads survived both the forward and reverse filtering?**
 Hint: This will be in your slurm output file. 
 
-
+&nbsp;
 ## Step 5: Analyze your trimmed read quality
 To look at the quality of our sequencing data we will use a program called **fastqc**. We will run this on only our successfully paired reads. 
 
@@ -153,7 +181,39 @@ This will generate a number of files with the ```fastqc``` in the name. We are i
 
 You will likely need to download the html files to look at them. Once you have them open you will be able to see the summary report for your paired reads. You **may not get all green check marks** for quality. That is ok! We could go back and re-run trimmomatic again, but these should be good enough to move foward. 
 
+&nbsp;
 ## LQ6
 **What are the scores you got for your genomes across the various statistics?**
+
+&nbsp;
+# Commands and Software
+&nbsp;
+##### sra tools
+Command for downloading SRA data 
+```bash
+prefetch [SRA_ID]
+```
+ &nbsp;
+ Command for splitting paired sequencing reads
+```bash
+fastq-dump --split-e [SRA_ID}.sra
+```
+Details here: https://github.com/ncbi/sra-tools/wiki/08.-prefetch-and-fasterq-dump
+&nbsp;
+##### trimmomatic
+Trimmomatic is run using java
+```bash
+java -jar /apps/pkg/trimmomatic/0.39/trimmomatic-0.39.jar [PE/SE] [options]
+```
+Details here: http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf
+
+&nbsp;
+##### FastQC
+Fastqc will assess the quality of our reads
+```bash
+fastqc [reads_to_be_analyzed]
+```
+Details here: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/
+
 
 
