@@ -117,6 +117,9 @@ ls                                    #see what is in the folder
 fastq-dump --split-e SRR6475892.sra   #We did paired-end sequencing so you will need to split them using this command
 ls                                    #see the files you created
 ```
+
+You can find out more about fastq files here: https://en.wikipedia.org/wiki/FASTQ_format
+
 &nbsp;
 ## LQ3
 **How many reads are there in your fastq file(s)? Report the number and the command.**
