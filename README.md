@@ -45,6 +45,10 @@ List of Species: https://www.ncbi.nlm.nih.gov/bioproject?LinkName=sra_bioproject
 
 <img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/53ec120d-3095-4204-b174-1d050091afb0" width="400">
 
+Once you have chosen a genome **use this link to put your name next to your genome**
+
+https://docs.google.com/spreadsheets/d/1Fvb5iW0VzAHfdC9qCPUcYTGsT4yJ4a4Wj8rn6pobHNc/edit?usp=sharing
+
 ### Step 2a: BioSample
 To find the Sequence Read Archive (SRA) data you will click on the "BioSample" link
 
