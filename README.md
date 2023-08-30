@@ -72,7 +72,7 @@ In the table you will see 1 run listed. Under the Run you will see a link. This 
 <img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/3440db16-5673-427f-8c59-57929617d8bc" width="400">
 
 I have chosen to do the tutorial with SRR6475892 (_Blastobotrys americana_). This means **you cannot choose SRR6475892**. 
-This also means whenever you see SRR6475892 in the commands you will replace it with your own genome identifier. 
+This also means **whenever you see SRR6475892 in the commands you will replace it with your own genome identifier**. 
 &nbsp;
 ## LQ1
 **What is the name of the species you chose?**
@@ -81,6 +81,25 @@ This also means whenever you see SRR6475892 in the commands you will replace it 
 **What is the SRA Run identifier of the species you chose?**
 &nbsp;
 ## Step 3: Download a genome
+
+### Before you begin
+
+**Log into the cluster**
+
+You will want to create a new folder to work in. I suggest creating a folder in your home directory (which is where you will be when you first log in)
+
+Make the new directory
+
+```bash
+mkdir lab_2
+```
+
+Now move into the new directory **before you begin** by using the change directory (cd) command. 
+
+```bash
+cd lab_2
+```
+
 
 ### Step 3a: Load the SRA Toolkit on the cluster
 
