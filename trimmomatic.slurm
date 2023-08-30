@@ -1,5 +1,6 @@
 #!/bin/bash 
 
+#SBATCH --partition=Centaurus
 #SBATCH --partition=Orion
 #SBATCH --job-name=trimmomatic
 #SBATCH --nodes=1
