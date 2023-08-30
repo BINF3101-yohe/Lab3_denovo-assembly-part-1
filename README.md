@@ -171,18 +171,22 @@ trimmomatic can take a few minutes to run so we will run it using our first **sl
 
 ### Step 4a: Run trimmomatic
 Follow these steps to run trimmomatic
+&nbsp;
 - Copy the slurm (trimmomatic.slurm) script to your working directory (it must be in the same directory as your files)
    ```bash
    cp /projects/class/binf3101_001/trimmomatic.slurm .
    ```
-  
+&nbsp;
 - Edit the slurm script so that it will analyze the genome that you chose - you can use vi or nano
 
 _Note when you look at the slurm script you will see SRR6475892_1.fastq SRR6475892_2.fastq... you will need to change the SRR to your SRR number_
-  
-- Submit the slurm script using the command ```sbatch trimmomatic.slurm``
+&nbsp;  
+- Submit the slurm script using the command ```sbatch trimmomatic.slurm```
+&nbsp;  
 - Check that your slurm script is running using the command ```squeue -u usrname```
-
+&nbsp;
+&nbsp;
+&nbsp;
 While the program is running let's look at the trimmomatic command we ran 
 ```java -jar /apps/pkg/trimmomatic/0.39/trimmomatic-0.39.jar PE -threads 4 SRR6475892_1.fastq SRR6475892_2.fastq SRR6475892_1_paired.fastq.gz SRR6475892_1_unpaired.fastq.gz SRR6475892_2_paired.fastq.gz SRR6475892_2_unpaired.fastq.gz ILLUMINACLIP:/apps/pkg/trimmomatic/0.39/adapters/TruSeq2-PE.fa:2:30:10 HEADCROP:15 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36```
 
@@ -203,7 +207,7 @@ While the program is running let's look at the trimmomatic command we ran
 ## LQ4
 **How many bases did we cut off at the end of our reads?**
 
-Once the pipeline is done running you will see the 4 output files appear in your directory. You will also see the slurm output from your run. This slurm output will have some metrics from your trimmomatic analysis. 
+Once the pipeline is done running you will see the 4 output files appear in your directory. You will also see the slurm output from your run with the format ```slurm-0000.out```. This slurm output will have some metrics from your trimmomatic analysis - you can look at the file using ```cat slurm-0000.out```
 
 &nbsp;
 ## LQ5
