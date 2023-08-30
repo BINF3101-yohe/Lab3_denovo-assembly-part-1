@@ -171,8 +171,15 @@ trimmomatic can take a few minutes to run so we will run it using our first **sl
 
 ### Step 4a: Run trimmomatic
 Follow these steps to run trimmomatic
-- Upload or copy the slurm (trimmomatic.slurm) script to your working directory (it must be in the same directory as your files)
-- Edit the slurm script so that it will analyze the genome that you chose
+- Copy the slurm (trimmomatic.slurm) script to your working directory (it must be in the same directory as your files)
+   ```bash
+   cp /projects/class/binf3101_001/trimmomatic.slurm .
+   ```
+  
+- Edit the slurm script so that it will analyze the genome that you chose - you can use vi or nano
+
+_Note when you look at the slurm script you will see SRR6475892_1.fastq SRR6475892_2.fastq... you will need to change the SRR to your SRR number_
+  
 - Submit the slurm script using the command ```sbatch trimmomatic.slurm``
 - Check that your slurm script is running using the command ```squeue -u usrname```
 
