@@ -109,7 +109,21 @@ The SRA provides a set of tools to help us retrieve data from the SRA. You will 
 module load sra-tools/
 ```
 
-You may get an error that says
+
+
+```bash
+vdb-config --interactive
+```
+
+The screen will **go blue and change** looking like this
+![image](https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/470884c1-1580-4838-b837-c48131a62936)
+
+**press the x key**
+
+The window should close
+
+
+In the future if you get the error below rerun the above command
 ```
 This sra toolkit installation has not been configured.
 Before continuing, please run: vdb-config --interactive
@@ -117,10 +131,6 @@ For more information, see https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud/
 ```
 
 If this occurs type this command and try again
-
-```bash
-vdb-config --restore-defaults
-```
    
 ### Step 3b: Retrieve the SRA file
 
