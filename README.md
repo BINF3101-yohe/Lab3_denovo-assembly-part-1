@@ -140,6 +140,8 @@ To obtain the sequencing data you will use the SRA identifier associated with yo
 prefetch SRR6475892
 ```
 
+Once it is done, type ``ls`` to list the files and folders that were created
+
 ### Step 3c: Extract the fastq files
 
 SRA data is saved in a file format called .sra that can be converted to a wide array of file types. We want to get the fastq files associated with the genome so we will use the ```fastq-dump``` command. 
