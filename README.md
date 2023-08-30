@@ -206,13 +206,13 @@ While the program is running let's look at the trimmomatic command we ran
 &nbsp;
 ## LQ4
 **How many bases did we cut off at the end of our reads?**
-
-Once the pipeline is done running you will see the 4 output files appear in your directory. You will also see the slurm output from your run with the format ```slurm-0000.out```. This slurm output will have some metrics from your trimmomatic analysis - you can look at the file using ```cat slurm-0000.out```
+Hint: this is in the command we used in the slurm script. Use the website above to look into this setting
 
 &nbsp;
 ## LQ5
 **What percent of your reads survived both the forward and reverse filtering?**
 Hint: This will be in your slurm output file. 
+Once the pipeline is done running you will see the 4 output files appear in your directory. You will also see the slurm output from your run with the format ```slurm-0000.out```. This slurm output will have some metrics from your trimmomatic analysis - you can look at the file using ```cat slurm-0000.out```
 
 &nbsp;
 ## Step 5: Analyze your trimmed read quality
