@@ -228,7 +228,52 @@ This will generate a number of files with the ```fastqc``` in the name. We are i
 
 ### Step 5b: Analyze fastqc results
 
-You will likely need to download the html files to look at them. Once you have them open you will be able to see the summary report for your paired reads. You **may not get all green check marks** for quality. That is ok! We could go back and re-run trimmomatic again, but these should be good enough to move foward. 
+To analyze the fastq files you will need to download the **html** files that were created. 
+
+Downloading is essentially the reverse of uploading! Here are instructions how to download a file on the various platforms
+
+#### Download on a mac
+
+- Open a new terminal shell and _do not_ log into the cluster
+- use ```scp``` do download the file using a command such as
+
+```bash
+scp username@hpc-student.uncc.edu:lab_2/SRR6475892/SRR6475892_1_paired_fastqc.html /path/to/directory/on/your/computer
+```
+
+#### Download on Windows with Ubuntu
+
+To access your local computer from Ubuntu you need to find your local computer in the /mnt/ directory.
+
+```bash
+scp username@hpc-student.uncc.edu:lab_2/SRR6475892/SRR6475892_1_paired_fastqc.html /mnt/c/Users/local/laptop/directory
+```
+
+#### Download on Windows with PSFTP
+
+Start up PSFTP. You can do this by searching PSFTP in the search bar
+
+Then log into the cluster using the command ```open username@hpc-student.uncc.edu```
+
+Check your local directory using ```!dir```
+
+This is where your file will be placed. I suggest you change that to your desktop using the "local change directory" command ```lcd lcd C:\Users\laptopUserName\Desktop```
+
+
+Check your remote directory using ```pwd```
+
+Move into the folder containing the file using change directory ```cd lab_2/SRR6475892```
+
+Now you can download the file using this command 
+
+```get SRR6475892_1_paired_fastqc.html```
+
+The file will be in your desktop
+
+
+&nbsp;
+
+Once you have them open you will be able to see the summary report for your paired reads. You **may not get all green check marks** for quality. That is ok! We could go back and re-run trimmomatic again, but these should be good enough to move foward. 
 
 &nbsp;
 ## LQ6
