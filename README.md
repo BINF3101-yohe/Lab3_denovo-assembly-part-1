@@ -60,7 +60,9 @@ This also means **whenever you see SRRXXXXXX in the commands, you will replace i
 &nbsp;
 ## LQ2
 **What is the SRA Run identifier of the species you chose?**
+
 &nbsp;
+
 ## Step 3: Download a genome
 
 ### Before you begin
@@ -137,11 +139,13 @@ ls                                    #see the files you created
 You can find out more about fastq files here: https://en.wikipedia.org/wiki/FASTQ_format
 
 &nbsp;
+
 ## LQ3
 **How many reads are there in your fastq file(s)? Report the number and the command.**
 Hint: Take a look at your file using the ```head``` command. Is there anything specific about each sequence description? Can you use the ```grep``` command to count how many times you see that specific sequence descriptor?
 
 &nbsp;
+
 ## Step 4: Filter your fastq file
 
 The sequence file analyzed here has ~6.5 million reads. We know from class that these reads can vary in quality and that there are adapters used in the sequencing that need to be removed.
@@ -184,12 +188,15 @@ While the program is running let's look at the trimmomatic command we ran
 ```ILLUMINACLIP:/apps/pkg/trimmomatic/0.39/adapters/TruSeq2-PE.fa:2:30:10``` This is the directory where the Illumina adaptors (repeated sequences) are stored. This tells trimmomatic what to look for and remove. 
 
 ```HEADCROP:15 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36``` These are the settings to trim the sequences. Use the website http://www.usadellab.org/cms/?page=trimmomatic to learn more about these settings. 
+
 &nbsp;
+
 ## LQ4
 **How many bases did we cut off at the end of our reads?**
 Hint: this is in the command we used in the slurm script. Use the website above to look into this setting
 
 &nbsp;
+
 ## LQ5
 **What percent of your reads survived both the forward and reverse filtering?**
 Hint: This will be in your slurm output file. 
@@ -257,6 +264,7 @@ The file will be in your desktop
 Once you have them open you will be able to see the summary report for your paired reads. You **may not get all green check marks** for quality. That is ok! We could go back and re-run trimmomatic again, but these should be good enough to move foward. 
 
 &nbsp;
+
 ## LQ6
 **What are the scores you got for your genomes across the various statistics?**
 
