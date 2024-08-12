@@ -39,43 +39,21 @@ The genomes that are currently publically available were described in this paper
 &nbsp;
 ## Step 2: Choose a genome
 
-You will need to choose one genome/species to analyze during the course of this project. There are almost 200 species to choose from! 
+You will need to choose one genome/species to analyze during the course of this project. There are over 700 species to choose from! 
 
-Go to this link and choose a species to work with this semester. Feel free to google the species to see what they are first! 
+Go to this link and choose a species to work with this semester. Feel free to google the species to see what they are first! Some species are _human pathogens_ while others are used to make _food or drink_.
 
-The species are listed under **Taxonomy** - See image below. 
-List of Species: https://www.ncbi.nlm.nih.gov/bioproject?LinkName=sra_bioproject&from_uid=4951374 
+SPECIES SIGN UP SHEET: https://docs.google.com/spreadsheets/d/1AIT-GHvhBJoh7BDy-Ee5fLxVRKuSfp8hqoU4H4CEA9s/edit?usp=sharing 
 
-<img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/53ec120d-3095-4204-b174-1d050091afb0" width="400">
+&nbsp;
 
-Once you have chosen a genome **use this link to put your name next to your genome**
+### Step 2a: Find the SRA Run identifier
 
-https://docs.google.com/spreadsheets/d/1Fvb5iW0VzAHfdC9qCPUcYTGsT4yJ4a4Wj8rn6pobHNc/edit?usp=sharing
-
-### Step 2a: BioSample
-To find the Sequence Read Archive (SRA) data you will click on the "BioSample" link
-
-<img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/98482b42-7a09-4628-9406-9ad1923623f2" width="400">
-
-### Step 2c: Click on SRA
-At the bottom and right-hand side of the page you will see a link to the SRA. Click that link
-
-<img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/d996ae5a-9874-4963-afaa-d34893e13ac3" width="400">
-
-### Step 2d: Pick the genome
-
-Some of the genomes we are using have been subsequently re-sequenced. To make sure we are all on the same page select genome 2. (Do not select the one starting with yHMP)
-
-<img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/b2318a16-c292-4b0f-8e31-e8a2faf66faf" width="400">
-
-
-### Step 2e: Find SRA Run identifier
-In the table you will see 1 run listed. Under the Run you will see a link. This is the identifier you will use throughout the project. 
-
-<img src="https://github.com/BINF-3101/denovo-assembly-part-1/assets/47755288/3440db16-5673-427f-8c59-57929617d8bc" width="400">
+In the table you will see a column called **SRA NUMBER**. This will be **your** SRA number for the entire semester. 
 
 I have chosen to do the tutorial with SRR6475892 (_Blastobotrys americana_). This means **you cannot choose SRR6475892**. 
-This also means **whenever you see SRR6475892 in the commands you will replace it with your own genome identifier**. 
+This also means **whenever you see SRRXXXXXX in the commands, you will replace it with your own genome identifier**. 
+
 &nbsp;
 ## LQ1
 **What is the name of the species you chose?**
@@ -89,9 +67,9 @@ This also means **whenever you see SRR6475892 in the commands you will replace i
 
 **Log into the cluster**
 
-You will want to create a new folder to work in. I suggest creating a folder in your home directory (which is where you will be when you first log in)
+You will create a new folder to work in for each week of the lab. Create this folder in your home directory (which is where you will be when you first log in)
 
-Make the new directory
+Make the new directory.
 
 ```bash
 mkdir lab_2
@@ -150,9 +128,9 @@ Once it is done, type ``ls`` to list the files and folders that were created
 SRA data is saved in a file format called .sra that can be converted to a wide array of file types. We want to get the fastq files associated with the genome so we will use the ```fastq-dump``` command. 
 
 ```bash
-cd SRR6475892/                        #enter the folder you downloaded
+cd SRRXXXXXX/                        #enter the folder you downloaded
 ls                                    #see what is in the folder
-fastq-dump --split-e SRR6475892.sra   #We did paired-end sequencing so you will need to split them using this command
+fastq-dump --split-e SRRXXXXXX.sra   #We did paired-end sequencing so you will need to split them using this command
 ls                                    #see the files you created
 ```
 
@@ -182,7 +160,7 @@ Follow these steps to run trimmomatic
 &nbsp;
 - Edit the slurm script so that it will analyze the genome that you chose - you can use vi or nano
 
-_Note when you look at the slurm script you will see SRR6475892_1.fastq SRR6475892_2.fastq... you will need to change the SRR to your SRR number_
+_Note when you look at the slurm script you will see SRRXXXXXX_1.fastq SRRXXXXXX_2.fastq... you will need to change the SRR to your SRR number_
 &nbsp;  
 - Submit the slurm script using the command ```sbatch trimmomatic.slurm```
 &nbsp;  
@@ -191,7 +169,7 @@ _Note when you look at the slurm script you will see SRR6475892_1.fastq SRR64758
 &nbsp;
 &nbsp;
 While the program is running let's look at the trimmomatic command we ran 
-```java -jar /apps/pkg/trimmomatic/0.39/trimmomatic-0.39.jar PE -threads 4 SRR6475892_1.fastq SRR6475892_2.fastq SRR6475892_1_paired.fastq.gz SRR6475892_1_unpaired.fastq.gz SRR6475892_2_paired.fastq.gz SRR6475892_2_unpaired.fastq.gz ILLUMINACLIP:/apps/pkg/trimmomatic/0.39/adapters/TruSeq2-PE.fa:2:30:10 HEADCROP:15 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36```
+```java -jar /apps/pkg/trimmomatic/0.39/trimmomatic-0.39.jar PE -threads 4 SRRXXXXXX_1.fastq SRRXXXXXX_2.fastq SRRXXXXXX_1_paired.fastq.gz SRRXXXXXX_1_unpaired.fastq.gz SRRXXXXXX_2_paired.fastq.gz SRRXXXXXX_2_unpaired.fastq.gz ILLUMINACLIP:/apps/pkg/trimmomatic/0.39/adapters/TruSeq2-PE.fa:2:30:10 HEADCROP:15 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36```
 
 ```java -jar /apps/pkg/trimmomatic/0.39/trimmomatic-0.39.jar``` This starts the process of running the java program trimmomatic
 
@@ -199,9 +177,9 @@ While the program is running let's look at the trimmomatic command we ran
 
 ```-threads 4``` This tells the program to use 4 threads to conduct the analysis. 
 
-```SRR6475892_1.fastq SRR6475892_2.fastq``` These are our input files
+```SRRXXXXXX_1.fastq SRRXXXXXX_2.fastq``` These are our input files
 
-```SRR6475892_1_unpaired.fastq.gz SRR6475892_2_paired.fastq.gz SRR6475892_2_unpaired.fastq.gz``` These are where our output files will be saved for our analysis. There are 4 output files: 2 for the 'paired' output where both reads survived the processing, and 2 for corresponding 'unpaired' output where a read survived, but the partner read did not
+```SRRXXXXXX_1_unpaired.fastq.gz SRRXXXXXX_2_paired.fastq.gz SRRXXXXXX_2_unpaired.fastq.gz``` These are where our output files will be saved for our analysis. There are 4 output files: 2 for the 'paired' output where both reads survived the processing, and 2 for corresponding 'unpaired' output where a read survived, but the partner read did not
 
 ```ILLUMINACLIP:/apps/pkg/trimmomatic/0.39/adapters/TruSeq2-PE.fa:2:30:10``` This is the directory where the Illumina adaptors (repeated sequences) are stored. This tells trimmomatic what to look for and remove. 
 
@@ -225,7 +203,7 @@ To look at the quality of our sequencing data we will use a program called **fas
 
 ```bash
 module load fastqc
-fastqc SRR6475892_1_paired.fastq.gz SRR6475892_2_paired.fastq.gz
+fastqc SRRXXXXXX_1_paired.fastq.gz SRRXXXXXX_2_paired.fastq.gz
 ```
 This will generate a number of files with the ```fastqc``` in the name. We are interested in looking at the html files which have a nice summary of the quality of our reads. 
 
@@ -241,7 +219,7 @@ Downloading is essentially the reverse of uploading! Here are instructions how t
 - use ```scp``` do download the file using a command such as
 
 ```bash
-scp username@hpc-student.uncc.edu:lab_2/SRR6475892/SRR6475892_1_paired_fastqc.html /path/to/directory/on/your/computer
+scp username@hpc-student.uncc.edu:lab_2/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html /path/to/directory/on/your/computer
 ```
 
 #### Download on Windows with Ubuntu
@@ -249,7 +227,7 @@ scp username@hpc-student.uncc.edu:lab_2/SRR6475892/SRR6475892_1_paired_fastqc.ht
 To access your local computer from Ubuntu you need to find your local computer in the /mnt/ directory.
 
 ```bash
-scp username@hpc-student.uncc.edu:lab_2/SRR6475892/SRR6475892_1_paired_fastqc.html /mnt/c/Users/local/laptop/directory
+scp username@hpc-student.uncc.edu:lab_2/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html /mnt/c/Users/local/laptop/directory
 ```
 
 #### Download on Windows with PSFTP
@@ -265,11 +243,11 @@ This is where your file will be placed. I suggest you change that to your deskto
 
 Check your remote directory using ```pwd```
 
-Move into the folder containing the file using change directory ```cd lab_2/SRR6475892```
+Move into the folder containing the file using change directory ```cd lab_2/SRRXXXXXX```
 
 Now you can download the file using this command 
 
-```get SRR6475892_1_paired_fastqc.html```
+```get SRRXXXXXX_1_paired_fastqc.html```
 
 The file will be in your desktop
 
