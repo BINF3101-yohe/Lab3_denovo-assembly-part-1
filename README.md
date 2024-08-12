@@ -120,7 +120,7 @@ If this occurs type this command and try again
 To obtain the sequencing data you will use the SRA identifier associated with your genome and the command ```prefetch```
 
 ```bash
-prefetch SRR6475892
+prefetch SRRXXXXX
 ```
 
 Once it is done, type ``ls`` to list the files and folders that were created
