@@ -132,7 +132,7 @@ SRA data is saved in a file format called .sra that can be converted to a wide a
 ```bash
 cd SRRXXXXXX/                        #enter the folder you downloaded
 ls                                    #see what is in the folder
-fastq-dump --split-e SRRXXXXXX.sra   #We did paired-end sequencing so you will need to split them using this command
+fasterq-dump SRRXXXXXX.sra   #We did paired-end sequencing so you will need to split them using this command
 ls                                    #see the files you created
 ```
 
@@ -141,8 +141,8 @@ You can find out more about fastq files here: https://en.wikipedia.org/wiki/FAST
 &nbsp;
 
 ## LQ3
-**How many reads are there in your fastq file(s)? Report the number and the command.**
-Hint: Take a look at your file using the ```head``` command. Is there anything specific about each sequence description? Can you use the ```grep``` command to count how many times you see that specific sequence descriptor?
+**How many reads from the SRA file were written to fastq file(s)?**
+This should be printed to the screen when you run the `fasterq-dump` command. 
 
 &nbsp;
 
