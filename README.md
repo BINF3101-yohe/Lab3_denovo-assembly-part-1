@@ -29,9 +29,12 @@
 &nbsp;
 ## Step 1: Intro
 
-Over the past decade or so, Dr. LaBella (me!) has been a part of a large consortium that attempted to sequence all known species of budding yeasts. We will be analyzing the raw sequencing data generated as a part of this project. 
+Over the past decade or so, Dr. LaBella (me!) has been part of a large consortium that attempted to sequence all known species of budding yeasts. We will analyze the raw sequencing data generated as part of this project. 
 
-The genomes that are currently publically available were described in this paper: https://www.cell.com/cell/pdf/S0092-8674(18)31332-1.pdf 
+The genomes that are currently publically available were described in this paper published in Science: https://www.science.org/doi/full/10.1126/science.adj4503
+
+<img src="https://github.com/user-attachments/assets/2b642ce1-dfa9-4661-a191-0f875f820b88" width="400">
+
 
 &nbsp;
 ## Step 2: Choose a genome
