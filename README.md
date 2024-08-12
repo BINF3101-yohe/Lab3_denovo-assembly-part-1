@@ -154,7 +154,10 @@ We will use a program called **trimmomatic** to remove the adaptors used in Illu
 
 trimmomatic can take a few minutes to run so we will run it using our first **slurm script**. 
 
-### Step 4a: Run trimmomatic
+### Step 4a: Run trimmomatic - NOT CURRENTLY WORKING
+
+- May need to copy jar file and also load openJDK
+
 Follow these steps to run trimmomatic
 &nbsp;
 - Copy the slurm (trimmomatic.slurm) script to your working directory (it must be in the same directory as your files)
