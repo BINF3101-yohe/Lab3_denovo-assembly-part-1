@@ -39,9 +39,11 @@ The genomes that are currently publically available were described in this paper
 &nbsp;
 ## Step 2: Choose a genome
 
-You will need to choose one genome/species to analyze during the course of this project. There are over 700 species to choose from! 
+To choose a species you will "sample" from the "environments" that are brought to class. 
 
-Go to this link and choose a species to work with this semester. Feel free to google the species to see what they are first! Some species are _human pathogens_ while others are used to make _food or drink_.
+Some species are _human pathogens_ while others are used to make _food or drink_.
+
+Once you have your species name, you will find the SRA number and more details about your species at this link. Please put your name next to your species
 
 SPECIES SIGN UP SHEET: https://docs.google.com/spreadsheets/d/1AIT-GHvhBJoh7BDy-Ee5fLxVRKuSfp8hqoU4H4CEA9s/edit?usp=sharing 
 
@@ -156,7 +158,6 @@ trimmomatic can take a few minutes to run so we will run it using our first **sl
 
 ### Step 4a: Run trimmomatic - NOT CURRENTLY WORKING
 
-- May need to copy jar file and also load openJDK
 
 Follow these steps to run trimmomatic
 &nbsp;
@@ -195,7 +196,7 @@ While the program is running let's look at the trimmomatic command we ran
 &nbsp;
 
 ## LQ4
-**How many bases did we cut off at the end of our reads?**
+**How many bases did we cut off at the end of our reads if they were below the quality threshold?**
 Hint: this is in the command we used in the slurm script. Use the website above to look into this setting
 
 &nbsp;
