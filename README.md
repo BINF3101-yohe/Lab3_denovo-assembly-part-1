@@ -156,7 +156,7 @@ We will use a program called **trimmomatic** to remove the adaptors used in Illu
 
 trimmomatic can take a few minutes to run so we will run it using our first **slurm script**. 
 
-### Step 4a: Run trimmomatic - NOT CURRENTLY WORKING
+### Step 4a: Run trimmomatic
 
 
 Follow these steps to run trimmomatic
