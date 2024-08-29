@@ -1,7 +1,6 @@
 #!/bin/bash 
 
 #SBATCH --partition=Centaurus
-#SBATCH --partition=Orion
 #SBATCH --job-name=trimmomatic
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
@@ -20,7 +19,7 @@ module load trimmomatic
 
 mkdir trimmomatic
 
-java -jar /apps/pkg/trimmomatic/0.39/trimmomatic-0.39.jar PE -threads 4 SRR6475892_1.fastq SRR6475892_2.fastq SRR6475892_1_paired.fastq.gz SRR6475892_1_unpaired.fastq.gz SRR6475892_2_paired.fastq.gz SRR6475892_2_unpaired.fastq.gz ILLUMINACLIP:/apps/pkg/trimmomatic/0.39/adapters/TruSeq2-PE.fa:2:30:10 HEADCROP:15 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36 
+java -jar /apps/pkg/trimmomatic/0.39/trimmomatic-0.39.jar PE -threads 4 SRRXXXXXXXX_1.fastq SRRXXXXXXXX_2.fastq SRRXXXXXXXX_1_paired.fastq.gz SRRXXXXXXXX_1_unpaired.fastq.gz SRRXXXXXXXX_2_paired.fastq.gz SRRXXXXXXXX_2_unpaired.fastq.gz ILLUMINACLIP:/apps/pkg/trimmomatic/0.39/adapters/TruSeq2-PE.fa:2:30:10 HEADCROP:15 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:36 
 
 
 
