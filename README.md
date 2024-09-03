@@ -230,7 +230,7 @@ Downloading is essentially the reverse of uploading! Here are instructions how t
 - use ```scp``` do download the file using a command such as
 
 ```bash
-scp username@hpc-student.uncc.edu:lab_2/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html /path/to/directory/on/your/computer
+scp username@hpc-student.charlotte.edu:lab_2/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html /path/to/directory/on/your/computer
 ```
 
 #### Download on Windows with Ubuntu
@@ -238,14 +238,14 @@ scp username@hpc-student.uncc.edu:lab_2/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html
 To access your local computer from Ubuntu you need to find your local computer in the /mnt/ directory.
 
 ```bash
-scp username@hpc-student.uncc.edu:lab_2/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html /mnt/c/Users/local/laptop/directory
+scp username@hpc-student.charlotte.edu:lab_2/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html /mnt/c/Users/local/laptop/directory
 ```
 
 #### Download on Windows with PSFTP
 
 Start up PSFTP. You can do this by searching PSFTP in the search bar
 
-Then log into the cluster using the command ```open username@hpc-student.uncc.edu```
+Then log into the cluster using the command ```open username@hpc-student.charlotte.edu```
 
 Check your local directory using ```!dir```
 
