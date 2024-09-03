@@ -272,6 +272,18 @@ Once you have them open you will be able to see the summary report for your pair
 ## LQ6
 **What are the scores you got for your genomes across the various statistics?**
 
+The statistics (regardless of what Canvas says) are
+Basic Statistics
+Per base sequence quality
+Per sequence quality scores
+Per base sequence content
+Per sequence GC content
+Per base N content
+Sequence Length Distribution
+Sequence Duplication Levels
+Overrepresented sequences
+Adapter Content
+
 &nbsp;
 # Commands and Software
 &nbsp;
