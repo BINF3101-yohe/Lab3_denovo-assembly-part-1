@@ -53,7 +53,7 @@ SPECIES SIGN UP SHEET: [https://docs.google.com/spreadsheets/d/1AIT-GHvhBJoh7BDy
 
 In the table you will see a column called **SRA NUMBER**. This will be **your** SRA number for the entire semester. 
 
-I have chosen to do the tutorial with SRR6475892 (_Blastobotrys americana_). This means **you cannot choose SRR6475892**. 
+I have chosen to do the tutorial with SRR6475892 (_Blastobotrys chiropterorum_). This means **you cannot choose SRR16974302**. 
 This also means **whenever you see SRRXXXXXX in the commands, you will replace it with your own genome identifier**. 
 
 &nbsp;
