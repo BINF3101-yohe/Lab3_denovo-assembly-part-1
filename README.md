@@ -1,4 +1,4 @@
-# Lab 2: De novo assembly part 1
+# Lab 3: De novo assembly part 1
 
 # Outline
 
@@ -29,9 +29,9 @@
 &nbsp;
 ## Step 1: Intro
 
-Over the past decade or so, Dr. LaBella (me!) has been part of a large consortium that attempted to sequence all known species of budding yeasts. We will analyze the raw sequencing data generated as part of this project. 
+Over the past decade or so, a large consortium that attempted to sequence all known species of budding yeasts. We will analyze the raw sequencing data generated as part of this project. 
 
-The genomes that are currently publically available were described in this paper published in Science: https://www.science.org/doi/full/10.1126/science.adj4503
+The genomes that are currently publically available were described in this paper published in Science including by our very own Dr. LaBella!: https://www.science.org/doi/full/10.1126/science.adj4503
 
 <img src="https://github.com/user-attachments/assets/2b642ce1-dfa9-4661-a191-0f875f820b88" width="400">
 
@@ -45,7 +45,7 @@ Some species are _human pathogens_ while others are used to make _food or drink_
 
 Once you have your species name, you will find the SRA number and more details about your species at this link. Please put your name next to your species
 
-SPECIES SIGN UP SHEET: https://docs.google.com/spreadsheets/d/1AIT-GHvhBJoh7BDy-Ee5fLxVRKuSfp8hqoU4H4CEA9s/edit?usp=sharing 
+SPECIES SIGN UP SHEET: [https://docs.google.com/spreadsheets/d/1AIT-GHvhBJoh7BDy-Ee5fLxVRKuSfp8hqoU4H4CEA9s/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1Roa55mNCej-Gb8TmDUUA9zWjUs2qSPv4xvi7kQ-bD0w/edit?usp=sharing) 
 
 &nbsp;
 
