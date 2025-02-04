@@ -235,7 +235,7 @@ Downloading is essentially the reverse of uploading! Here are instructions how t
 - use ```scp``` do download the file using a command such as
 
 ```bash
-scp username@hpc-student.charlotte.edu:lab_2/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html /path/to/directory/on/your/computer
+scp username@hpc-student.charlotte.edu:lab_3/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html /path/to/directory/on/your/computer
 ```
 
 #### Download on Windows with Ubuntu
@@ -243,7 +243,7 @@ scp username@hpc-student.charlotte.edu:lab_2/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc
 To access your local computer from Ubuntu you need to find your local computer in the /mnt/ directory.
 
 ```bash
-scp username@hpc-student.charlotte.edu:lab_2/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html /mnt/c/Users/local/laptop/directory
+scp username@hpc-student.charlotte.edu:lab_3/SRRXXXXXX/SRRXXXXXX_1_paired_fastqc.html /mnt/c/Users/local/laptop/directory
 ```
 
 #### Download on Windows with PSFTP
