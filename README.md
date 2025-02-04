@@ -76,13 +76,13 @@ You will create a new folder to work in for each week of the lab. Create this fo
 Make the new directory.
 
 ```bash
-mkdir lab_2
+mkdir lab_3
 ```
 
 Now move into the new directory **before you begin** by using the change directory (cd) command. 
 
 ```bash
-cd lab_2
+cd lab_3
 ```
 
 
@@ -162,8 +162,13 @@ trimmomatic can take a few minutes to run so we will run it using our first **sl
 Follow these steps to run trimmomatic
 &nbsp;
 - Copy the slurm (trimmomatic.slurm) script to your working directory (it must be in the same directory as your files)
+- You can download the file from the github (https://github.com/BINF3101-yohe/Lab3_denovo-assembly-part-1/blob/main/trimmomatic.slurm) and copy to the working directory of your server folder OR
+- You can clone the github to your local directory and copy it from the colder:  
    ```bash
-   cp /projects/class/binf3101_001/trimmomatic.slurm .
+   cd          #takes you to your home directory
+   git clone https://github.com/BINF3101-yohe/Lab3_denovo-assembly-part-1.git
+   cp Lab3_denovo-assembly-part-1/trimmomatic.slurm lab3    #copies a file from the github folder to your lab3 working folder
+
    ```
 &nbsp;
 - Edit the slurm script so that it will analyze the genome that you chose - you can use vi or nano
